@@ -1397,7 +1397,9 @@ button:hover {
 }
 
 @media (max-width: 768px) {
-
+.footer-logo {
+    width: auto;
+  }
     .hamburger {
       display: flex;
   }
