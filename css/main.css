@@ -1574,6 +1574,9 @@ button:hover {
 }
 /* Extra Small Devices (less than 576px) */
 @media (max-width: 576px) {
+  .img-content {
+    align-items: center;
+  }
   img.alt-card {
     width: 100%;
     border-radius: 16px;
