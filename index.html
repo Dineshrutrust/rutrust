@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kaisei+Opti&display=swap" rel="stylesheet">
+    <script src="https://www.google.com/recaptcha/api.js"></script>
 </head>
 <body>
     <div class="overlay" id="popup-overlay">
@@ -19,12 +20,19 @@
                 </svg>
             </button>
             <h1>Enter your email below to get started!"</h1>
-            <form id="popup-form">
+            <form id="popup-form" class="contact-form">
                 <div class="input-group">
-                    <input type="text" placeholder="Enter your name" required>
+<!--                     <input type="text" placeholder="Enter your name" required> -->
                     <input type="email" placeholder="Enter email address" required>
                 </div>
-                <button type="submit" class="contact-button1">Submit</button>
+                <div class="input-group">
+                    <button 
+                        class="g-recaptcha contact-button1" 
+                        data-sitekey="6LcVmMQqAAAAAOyOtLZ3Jw04eyyjCm1_IxNYI5Z_" 
+                        data-callback='onCaptchaSubmit' 
+                        data-action='submit'
+                    >Submit</button>
+                </div>
             </form>
         </div>
     </div>
@@ -39,7 +47,7 @@
             </div>
             <ul class="nav-links">
                 <li><a href="#" onclick="scrollToSection(event, 'section1')">Home</a></li>
-                <li><a href="#" onclick="scrollToSection(event, 'section3')">Business Principles</a></li>
+                <li><a href="#" onclick="scrollToSection(event, 'section3')">Principals</a></li>
                 <li><a href="#" onclick="scrollToSection(event, 'section4')">About Us</a></li>
                 <button href="#" class="contact-button" id="trigger-button">Get in Touch</button>
             </ul>
@@ -79,11 +87,11 @@
                     </g>
                 </svg>
             </div>
-            <div class="badge-no">
+<!--             <div class="badge-no">
                 <p class="bdg"><img class="bdg-orng" src="./images/kid_star.svg">Trusted by 40,000+ Farmers</p>
-            </div>
-            <div class="hero-text">Building a sustainable<br><span class="kaisei-font">digital gateway</span> to transform rural India</div>
-            <p class="hero-subtxt">RuTech AgriGate is a rural-tech firm that seeks to support rural development and farmer livelihoods in India across 150mn+ agricultural households and 600,000+ villages.</p>
+            </div> -->
+            <div class="hero-text">Building a <br><span class="kaisei-font">Digital Gateway</span> to Rural India</div>
+            <p class="hero-subtxt">RuTrust AgriGate is a rural-tech firm that seeks to connect the rural economy to modern economy by building a digital gateway to 100+ million rural households across 600,000+ villages in India</p>
             <a href="#" class="cta-button">Get in Touch</a>
         </section>
 
@@ -124,13 +132,13 @@
                 <img src="./images/stroke.svg" alt="Rural households" class="app-image-stroke">
                 <img src="./images/agrigateapp.png" alt="Rural households" class="app-image">
             </div>
-            
-            <div class="app-head">Transforming Agriculture for a <br> Better Tomorrow</div>
-            <p class="app-subtxt">We unite technology and innovation to create a market-oriented, efficient, and sustainable ecosystem that uplifts rural India.</p>
             <div class="app-buttons">
-                <a href="#" class="app-button">Download Buyer App</a>
                 <a href="#" class="app-button">Download Farmer App</a>
+                <a href="#" class="app-button">Download Buyer App</a>
             </div>
+            <div class="app-head">Transforming Rural India for a Better Tomorrow</div>
+<!--             <p class="app-subtxt">We unite technology and innovation to create a market-oriented, efficient, and sustainable ecosystem that uplifts rural India.</p> -->
+
         </section>
     </section>
 
@@ -178,7 +186,7 @@
     <!-- Carousel Section -->
     <div class="container" id="section3">
         <div class="badge-no-center">
-            <p class="prpl-bdg"><img class="bdg-orng" src="./images/principles.svg">BUSINESS PRINCIPLES</p>
+            <p class="prpl-bdg"><img class="bdg-orng" src="./images/principles.svg">PRINCIPALS</p>
         </div>
         <div class="slide-head">What makes us <span class="kaisei-font">Different</span></div>
         <p class="app-subtxt2">
@@ -231,7 +239,7 @@
     <!-- Mobile Slide Alternative -->
     <div class="mobile-slide-alternative">
         <div class="badge-no-center">
-            <p class="prpl-bdg"><img class="bdg-orng" src="./images/principles.svg">PRINCIPLES</p>
+            <p class="prpl-bdg"><img class="bdg-orng" src="./images/principles.svg">PRINCIPALS</p>
         </div>
         <div class="slide-head">What makes us <span class="kaisei-font">Different</span></div>
         <div class="slide-alt-card1">
@@ -252,7 +260,7 @@
             <img class="alt-card" src="./images/slide2.png" alt="Rural households">
             <div class="img-content">
                 <h3 class="image-desc">Partnership oriented</h3>
-                <p class="image-subtxt">Current participants in the ecosystem as allies, not adversaries. Leverage their presence & expertise to deliver value.</p>
+                <p class="image-subtxt">View Current participants in the ecosystem as allies, not adversaries. Leverage their presence & expertise to deliver value.</p>
             </div>
         </div>
 
@@ -299,9 +307,8 @@
                         <li class="item-wrap">Email: <div href="mailto:info@site.com" class="text-primary"> reach@theruraltrust.com</div></li>
                         <li class="item-wrap"><br></li>
                         <li class="item-wrap">Address: </li>
-                        <li class="item-wrap">350 Dummy address, Haryana, India - 300021</li><br>
-                        <li class="item-wrap">Working hours:</span><br></li>
-                        <li class="item-wrap">9:00AM - 6:00PM</li>
+                        <li class="item-wrap">RUTRUST AGRIGATE INDIA PRIVATE LIMITED<br>
+                            Plot No-65, Sector 44,, 1ST FLOOR, Landmark House, Gurugram, Haryana, 122003</li><br>
                     </ul>
                 </div>
             </div>
@@ -324,7 +331,7 @@
                     <h3>Company</h3>
                     <ul>
                         <li><a href="#" onclick="scrollToSection(event, 'section1')">Home</a></li>
-                        <li><a href="#" onclick="scrollToSection(event, 'section3')">Business Principles</a></li>
+                        <li><a href="#" onclick="scrollToSection(event, 'section3')">Principals</a></li>
                         <li><a href="#" onclick="scrollToSection(event, 'section4')">About Us</a></li>
                     </ul>
                 </div>
@@ -586,16 +593,42 @@
             }
         });
 
+       function onCaptchaSubmit(token) {
+            handleFormSubmit();
+       }
+
         // Handle form submission
         popupForm.addEventListener('submit', (e) => {
+            e.stopPropagation();
             e.preventDefault();
-            const name = e.target.querySelector('input[type="text"]').value;
-            const email = e.target.querySelector('input[type="email"]').value;
-            console.log('Submitted name:', name);
-            console.log('Submitted email:', email);
-            hidePopup();
-            // Add your form submission logic here
         });
+
+        function handleFormSubmit() {
+            const name = popupForm.querySelector('input[type="text"]').value?.trim();
+            const email = popupForm.querySelector('input[type="email"]').value?.trim();
+            if (!name || !email) return;
+            submitFormData(name, email);
+            hidePopup();
+        }
+
+        async function submitFormData(name, email) {
+            try {
+                const rawResp = await fetch("https://kqrdjaq7xkjm7h7lq3c6o7w2ya0qnemc.lambda-url.ap-south-1.on.aws/", {
+                    method: 'POST',
+                    headers: {
+                      'Accept': 'application/json',
+                      'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ name, email })
+                });
+                const resp = await rawResp.json();
+                console.log("Contact form submitted", resp.data);
+                if (resp.data.success) return;
+            } catch (e) {
+                console.error("Contact form submission failed", e);
+            }
+            alert("Something went wrong. Please try again later.");
+        }
     </script>
 </body>
 </html>
