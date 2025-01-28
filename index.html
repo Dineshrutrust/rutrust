@@ -604,10 +604,9 @@
         });
 
         function handleFormSubmit() {
-            const name = popupForm.querySelector('input[type="text"]').value?.trim();
             const email = popupForm.querySelector('input[type="email"]').value?.trim();
-            if (!name || !email) return;
-            submitFormData(name, email);
+            if (!email) return; // Exit if email is empty or invalid
+            submitFormData(email);
             hidePopup();
         }
 
