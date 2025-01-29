@@ -372,7 +372,7 @@ p.missin-bdg {
 
 .features {
   display: flex;
-  width: 1400px;
+  width: 95%;
   gap: 20px;
   margin: 0 auto;
 }
