@@ -426,20 +426,38 @@
         }
 
         // Carousel Handler
-        class CarouselHandler {
+       class CarouselHandler {
             constructor() {
                 this.slides = document.querySelectorAll('.slide');
                 this.slideImage = document.getElementById('slideImage');
                 this.currentSlide = 0;
                 this.currentAnimation = null;
+                this.intervalId = null;
             }
 
             initialize() {
                 this.updateSlide(0);
-                setInterval(() => {
+                this.setupAutomaticRotation();
+                this.setupClickHandlers();
+            }
+
+            setupAutomaticRotation() {
+                if (this.intervalId) clearInterval(this.intervalId);
+                this.intervalId = setInterval(() => {
                     this.currentSlide = (this.currentSlide + 1) % this.slides.length;
                     this.updateSlide(this.currentSlide);
                 }, CONFIG.CAROUSEL_DURATION);
+            }
+
+            setupClickHandlers() {
+                this.slides.forEach((slide, index) => {
+                    const title = slide.querySelector('.slide-title');
+                    title.addEventListener('click', () => {
+                        this.currentSlide = index;
+                        this.updateSlide(this.currentSlide);
+                        this.setupAutomaticRotation();
+                    });
+                });
             }
 
             updateProgress(progressBar) {
@@ -489,7 +507,6 @@
                 }, 250);
             }
         }
-
         // Animation Handler
         class AnimationHandler {
             constructor() {
