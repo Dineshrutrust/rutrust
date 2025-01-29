@@ -568,6 +568,15 @@ h1 {
   margin-bottom: 2rem;
 }
 
+.slide-title {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.slide-title:hover {
+  color: #df7f2e;
+}
+
 .carousel-container {
   display: flex;
   border-radius: 16px;
