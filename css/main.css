@@ -20,12 +20,11 @@ nav {
     width: 100%;
     background: #ffffff;
     transition: transform 0.3s ease-in-out;
-    transform: translateY(-100%);
     z-index: 1;
 }
 
-.navbar.visible {
-    transform: translateY(0);
+.navbar:not(.visible) {
+    transform: translateY(-100%);
 }
 
 a.text-primary {
