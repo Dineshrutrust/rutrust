@@ -37,7 +37,7 @@
         </div>
     </div>
     <!-- Navigation -->
-    <nav>
+    <nav class="navbar">
         <div class="nav-container">
             <img src="./images/agrigatelogo.png" alt="AgriGate Logo" class="logo">
             <div class="hamburger">
@@ -355,7 +355,7 @@
     <!-- JavaScript -->
     <script>
         let lastScrollY = window.scrollY;
-        const navbar = document.querySelector(".nav-container");
+        const navbar = document.querySelector(".navbar");
         
         window.addEventListener("scroll", () => {
             if (window.scrollY < lastScrollY) {
