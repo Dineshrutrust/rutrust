@@ -398,7 +398,7 @@ p.missin-bdg {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   gap: 12px;
   align-self: stretch;
 }
