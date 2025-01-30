@@ -354,6 +354,18 @@
 
     <!-- JavaScript -->
     <script>
+        let lastScrollY = window.scrollY;
+        const navbar = document.querySelector(".nav-container");
+        
+        window.addEventListener("scroll", () => {
+            if (window.scrollY < lastScrollY) {
+                navbar.classList.add("visible"); // Show on scroll up
+            } else {
+                navbar.classList.remove("visible"); // Hide on scroll down
+            }
+            lastScrollY = window.scrollY;
+        });
+
         function scrollToSection(event, sectionId) {
         event.preventDefault(); // Prevent the default anchor click behavior
 
