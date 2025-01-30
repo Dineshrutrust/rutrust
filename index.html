@@ -357,6 +357,9 @@
         let lastScrollY = window.scrollY;
         const navbar = document.querySelector(".navbar");
         
+        // Show the navbar initially
+        navbar.classList.add("visible");
+        
         window.addEventListener("scroll", () => {
             if (window.scrollY < lastScrollY) {
                 navbar.classList.add("visible"); // Show on scroll up
@@ -365,6 +368,7 @@
             }
             lastScrollY = window.scrollY;
         });
+
 
         function scrollToSection(event, sectionId) {
         event.preventDefault(); // Prevent the default anchor click behavior
